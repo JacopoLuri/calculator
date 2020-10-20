@@ -1,6 +1,8 @@
 const inputFirstNum = document.querySelector('#calculator-a');
 const inputSecondNum = document.querySelector('#calculator-b');
 
+const inputs = document.querySelectorAll('.input');
+
 const sumBtn = document.querySelector('#sum_btn');
 const productBtn = document.querySelector('#product_btn');
 
@@ -15,7 +17,13 @@ const buttons = document.querySelectorAll('.get-result_btn');
 const sum = (a, b) => a + b;
 const multiply = (a, b) => a * b;
 
-const clear = (el) => el.innerHTML = '';
+const clear = (el) => {
+  el.innerHTML = '';
+}
+
+const clearInputs = () => inputs.forEach((el) => {
+  el.value = '';
+});
 // sumBtn.addEventListener('click', (e) => {
 //   e.preventDefault()
 // });
@@ -34,6 +42,7 @@ buttons.forEach((button) => {
       result.innerHTML = resOfMultiply;
     } else {
       clear(result);
+      clearInputs();
     }
   })
 });
