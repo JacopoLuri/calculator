@@ -11,21 +11,24 @@
             <section>
                 <div class="wrapper">
                     <div class="inner-wrapper">
-                        <form method="GET">
+                        <div class="form">
                             <div class="input_wrap">
-                                <input type="text" id="calculator-a" placeholder="write a number">
-                                <input type="text" id="calculator-b" placeholder="write another number">
+                                <input class="input" type="text" id="calculator-a" placeholder="write a number">
+                                <input class="input" type="text" id="calculator-b" placeholder="write another number">
                             </div>
                           <div class="button_wrap">
-                            <button id="sum_btn" type="submit" >SUM</button>
-                            <button id="product_btn" type="submit" >BUTTON</button>
+                            <button class="get-result_btn sum_result_btn" id="sum_btn" type="submit" >SUM</button>
+                            <button class="get-result_btn product_result_btn" id="product_btn" type="submit" >PRODUCT</button>
                           </div>
                           <div class="result_wrap">
                             <div class="result">
-                                <p class="text_result">42</p>
+                                <p class="text_result"></p>
                              </div>
                           </div>
-                         </form>
+                          <div class="clear_btn_wrap">
+                              <button class="clear get-result_btn">CLEAR</button>
+                          </div>
+                        </div>
                          <div id="result"> </div>
                     </div>
                 </div>
