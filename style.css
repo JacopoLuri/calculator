@@ -1,8 +1,90 @@
-NO STYLE YET.
 
-TASK 1: connect calculator-a and calculator-b to a and b of js
-console log it
-TASK 2
-create buttons (callback sum and calback multiply)
-TASK 3
-change innerhtml??
+
+/* * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+} */
+
+.wrapper {
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    min-height: 100vh;
+    align-content: center;
+    display: flex;
+}
+
+.inner-wrapper {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+}
+
+.input_wrap {
+    margin: 30px 0;
+}
+
+.input_wrap input {
+    padding: 15px;
+    font-size: 20px;
+    border-radius: 10px;
+}
+
+.button_wrap {
+    display: flex;
+    justify-content: center;
+}
+
+#calculator-a {
+    margin-right: 30px;
+}
+
+#sum_btn, #product_btn {
+    margin-right: 30px;
+    min-width: 40%;
+    padding: 20px;
+    font-size: 20px;
+    border-radius: 10px;
+}
+
+.result_wrap {
+    display: flex;
+    justify-content: center;
+}
+.result {
+    display: flex;
+    max-width: 50%;
+    width: 50%;
+    justify-content: center;
+    border: 1px solid grey;
+    border-radius: 10px;
+    margin-top: 30px;
+    padding: 10px;
+    font-size: 40px;
+    height: 70px;
+    min-height: 70px;
+}
+
+.text_result {
+    margin: 10px;
+}
+
+.clear_btn_wrap {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.clear {
+    border-radius: 10px;
+    font-size: 15px;
+    padding: 10px;
+}
