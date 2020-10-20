@@ -20,7 +20,8 @@ const welcomeText = document.querySelector('.welcome');
     setTimeout(() => {
       welcomeText.classList.add('scale-in-center');
       welcomeText.getElementsByClassName.display = 'flex';
-    }, 1000);
+      inputFirstNum.autofocus;
+    }, 2000);
 
 const sum = (a, b) => a + b;
 const multiply = (a, b) => a * b;
