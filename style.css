@@ -1,8 +1,89 @@
-NO STYLE YET.
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'VT323', monospace;
+}
 
-TASK 1: connect calculator-a and calculator-b to a and b of js
-console log it
-TASK 2
-create buttons (callback sum and calback multiply)
-TASK 3
-change innerhtml??
+form {
+    display: flex;
+    justify-content: center;
+    width: 600px;
+    height: 600px;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin: 75px auto;
+    background-color: rgb(212, 205, 108);
+    -webkit-box-shadow: 15px 15px 0px 5px rgba(99,95,52,1);
+    -moz-box-shadow: 15px 15px 0px 5px rgba(99,95,52,1);
+    box-shadow: 15px 15px 0px 5px rgba(99,95,52,1);
+
+}
+
+.box-container {
+    width: 80%;
+    height: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: space-around;
+}
+
+.result-container {
+    width: 100%;
+    height: 120px;
+}
+
+.result-container p {
+    color: darkgray;
+    font-size: 90px;
+    text-align: center;
+    line-height: 120px;
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: darkslategray;
+    -webkit-box-shadow: 15px 15px 0px 5px rgba(21,36,36,1);
+    -moz-box-shadow: 15px 15px 0px 5px rgba(21,36,36,1);
+    box-shadow: 15px 15px 0px 5px rgba(21,36,36,1);
+}
+
+.input-container {
+    width: 180px;
+    height: 120px;
+}
+
+.input-container input {
+    width: 180px;
+    height: 60px;
+    background-color: rgba(229, 190, 1);
+    font-size: 25px;
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 5px;
+    -webkit-box-shadow: 15px 15px 0px 5px rgba(97,54,12,1);
+    -moz-box-shadow: 15px 15px 0px 5px rgba(97,54,12,1);
+    box-shadow: 15px 15px 0px 5px rgba(97,54,12,1);
+}
+
+::placeholder {
+    color: darkslategrey;
+}
+
+.operator-container {
+    width: 180px;
+    height: 120px;
+}
+
+.operator-container input {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(229, 190, 1);
+    font-size: 30px;
+    border: 2px solid black;
+    border-radius: 5px;
+    -webkit-box-shadow: 15px 15px 0px 5px rgba(97,54,12,1);
+    -moz-box-shadow: 15px 15px 0px 5px rgba(97,54,12,1);
+    box-shadow: 15px 15px 0px 5px rgba(97,54,12,1);
+
+}
+
