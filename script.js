@@ -1,3 +1,5 @@
+a.getElementById("calculator-a");
+b.getElementById("calculator-b")
 function multiply(a, b) {
     return a * b;
   };
@@ -13,9 +15,6 @@ function multiply(a, b) {
   };
 calculator3(sum, a, b);
 calculator3(multiply, a, b);
-
-a.getElementById("calculator-a");
-b.getElementById("calculator-b")
   
   /* remove this part when .getelementbyidis working
   calculator4(sum, a, b);
