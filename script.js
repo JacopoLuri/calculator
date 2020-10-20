@@ -12,6 +12,6 @@ function multiply(a, b) {
     )
   };
   
-  
+  /* remove this part when .getelementbyidis working
   calculator4(sum, 92, 27);
-  calculator4(multiply, 56, 44);
+  calculator4(multiply, 56, 44);*/
