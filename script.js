@@ -1,3 +1,4 @@
+
 const inputFirstNum = document.querySelector('#calculator-a');
 const inputSecondNum = document.querySelector('#calculator-b');
 
@@ -14,6 +15,13 @@ const buttonsWrap = document.querySelector('#button_wrap');
 
 const buttons = document.querySelectorAll('.get-result_btn');
 
+const welcomeText = document.querySelector('.welcome');
+
+    setTimeout(() => {
+      welcomeText.classList.add('scale-in-center');
+      welcomeText.getElementsByClassName.display = 'flex';
+    }, 1000);
+
 const sum = (a, b) => a + b;
 const multiply = (a, b) => a * b;
 
@@ -24,13 +32,9 @@ const clear = (el) => {
 const clearInputs = () => inputs.forEach((el) => {
   el.value = '';
 });
-// sumBtn.addEventListener('click', (e) => {
-//   e.preventDefault()
-// });
 
 buttons.forEach((button) => {
   button.addEventListener('click', (element) => {
-    //result.innerHTML = '';
     element.preventDefault();
     const firstValue = Number(inputFirstNum.value);
     const secondValue = Number(inputSecondNum.value);
@@ -46,32 +50,3 @@ buttons.forEach((button) => {
     }
   })
 });
-
-// const addButtonsClickHandler = () => {
-//   buttonsWrap.addEventListener('click', (e) => {
-//     if(e.target.classList.contains('get-result_btn')) {
-//       let clickedTag = e.target;
-//         removeSelectedTags();
-//         selectClickedTag(clickedTag);
-//     }
-//   })
-// }
-
-
-// function multiply(a, b) {
-//     return a * b;
-//   };
-  
-//   function sum(a, b) {
-//     return a + b;
-//   };
-  
-  // const calculator4 = (callback, a, b) => {
-  //   console.log(
-  //     `The result is ${callback == sum ? (a+b) : (a*b)} Teiko refractoring`
-  //   )
-  // };
-  
-  /* remove this part when .getelementbyidis working
-  calculator4(sum, 92, 27);
-  calculator4(multiply, 56, 44);*/
