@@ -3,6 +3,14 @@
 
 *, body {
     font-family: 'Inconsolata', monospace;
+    outline: none;
+    padding: 0;
+    margin: 0;
+    
+}
+
+.main {
+    background: #0c162a;
 }
 
 .wrapper {
@@ -33,6 +41,7 @@
     justify-content: center;
     min-height: 160px;
     height: 160px;
+    color: #fff;
 }
 
 .scale-in-center {
@@ -96,6 +105,25 @@
     padding: 20px;
     font-size: 20px;
     border-radius: 10px;
+    border: 2px solid #3a3838;
+    background-color: #ff99ee;
+    transition: all .25s ease-in-out;
+}
+
+#product_btn:hover {
+    background-color: #5454ff;
+}
+
+#product_btn:active {
+    transform: translate(5px, 5px);
+}
+
+#sum_btn:hover {
+    background-color: #5454ff;
+}
+
+#sum_btn:active {
+    transform: translate(5px, 5px);
 }
 
 .result_wrap {
@@ -118,6 +146,7 @@
 
 .text_result {
     margin: 10px;
+    color: #fff;
 }
 
 .clear_btn_wrap {
