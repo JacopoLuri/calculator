@@ -3,17 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <title>Calculator</title>
 </head>
     <body>
-        <form method="GET">
-           <!--getelementbyid a, b -->
-        <input type="text" id="calculator-a" placeholder="write a number">
-        <input type="text" id="calculator-b" placeholder="write another number">
-        <button id="sum" type="submit">SUM</button>
-        <button id="product" type="submit" >PRODUCT</button>
-        <button id="equals" type="submit" >submit</button>
-        <div id="result" onClick="change()"> </div>
-        <script src="script.js"></script>
+        <div id="calc-body">
+            <form method="GET">
+                <input type="number" id="numberA" placeholder="0" onkeydown="return event.keyCode !== 69">
+                <input type="number" id="numberB" placeholder="0" onkeydown="return event.keyCode !== 69">
+            </form>
+            <button type="button" onclick=sum()>+</button>
+            <button type="button" onclick=substraction()>-</button>
+            <button type="button" onclick=product()>x</button>
+            <button type="button" onclick=divide()>/</button>
+        
+            <div id="result"></div>
+        </div>
+    <script src="script.js"></script>
     </body>
 </html>

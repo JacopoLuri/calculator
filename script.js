@@ -1,28 +1,65 @@
-const a = document.querySelector("#calculator-a");
-const b = document.querySelector("#calculator-b");
-const sum = document.querySelector("#sum");
-const multiply = document.querySelector("#product")
+function sum() {
+  const numberA = document.getElementById("numberA").value;
+  const numberB = document.getElementById("numberB").value;
+  if (Number(numberA) + Number(numberB) > 1000000) {
+    document.getElementById("result").innerHTML = "<b>thick</b>  boi";
+  } else if (Number(numberA) + Number(numberB) < -1000000) {
+    document.getElementById("result").innerHTML = "smol number";
+  } else if (Number(numberA) + Number(numberB) < 0.0000001 && Number(numberA) + Number(numberB) > 0) {
+    document.getElementById("result").innerHTML = "0<sup>+</sup>";
+  } else if (Number(numberA) + Number(numberB) > -0.0000001 && Number(numberA) + Number(numberB) < 0) {
+    document.getElementById("result").innerHTML = "0<sup>-</sup>";
+  } else {
+    document.getElementById("result").innerHTML = Number(numberA) + Number(numberB);
+  }
+}
 
-function multiply(a, b) {
-    return a * b;
-  };
-  
-  function sum(a, b) {
-    return a + b;
-  };
-  
-  function calculator3 = (callback, a, b) => {
-    element.preventDefault();
-    a=Number(a.value)
-    b=Number(b.value)
-    console.log(
-      `The result is ${callback == sum ? (a+b) : (a*b)} :D`
-    )
-  };
-function change(){
-    document.getElementById("result").innerHTML = calculator3; 
-};
-  
-  /* remove this part when .getelementbyidis working
-  calculator4(sum, a, b);
-  calculator4(multiply, a, b);*/
+function substraction() {
+  const numberA = document.getElementById("numberA").value;
+  const numberB = document.getElementById("numberB").value;
+  if (Number(numberA) - Number(numberB) > 1000000) {
+    document.getElementById("result").innerHTML = "<b>thick</b>  boi";
+  } else if (Number(numberA) - Number(numberB) < -1000000) {
+    document.getElementById("result").innerHTML = "smol number";
+  } else if (Number(numberA) - Number(numberB) < 0.0000001 && Number(numberA) - Number(numberB) > 0) {
+    document.getElementById("result").innerHTML = "0<sup>+</sup>";
+  } else if (Number(numberA) - Number(numberB) > -0.0000001 && Number(numberA) - Number(numberB) < 0) {
+    document.getElementById("result").innerHTML = "0<sup>-</sup>";
+  } else {
+    document.getElementById("result").innerHTML = Number(numberA) - Number(numberB);
+  }  
+}
+
+function product() {
+  console.log(document.getElementById("numberA").value === "")
+  const numberA = document.getElementById("numberA").value;
+  const numberB = document.getElementById("numberB").value;
+  if (Number(numberA) * Number(numberB) > 1000000) {
+    document.getElementById("result").innerHTML = "<b>thick</b>  boi";
+  } else if (Number(numberA) * Number(numberB) < -1000000) {
+    document.getElementById("result").innerHTML = "smol number";
+  } else if (Number(numberA) * Number(numberB) < 0.0000001 && Number(numberA) * Number(numberB) > 0) {
+    document.getElementById("result").innerHTML = "0<sup>+</sup>";
+  } else if (Number(numberA) * Number(numberB) > -0.0000001 && Number(numberA) * Number(numberB) < 0) {
+    document.getElementById("result").innerHTML = "0<sup>-</sup>";
+  } else {
+    document.getElementById("result").innerHTML = Number(numberA) * Number(numberB);
+  } 
+}
+
+function divide() {
+  console.log(document.getElementById("numberA").value === "")
+  const numberA = document.getElementById("numberA").value;
+  const numberB = document.getElementById("numberB").value;
+  if (Number(numberA) / Number(numberB) > 1000000) {
+    document.getElementById("result").innerHTML = "<b>thick</b>  boi";
+  } else if (Number(numberA) / Number(numberB) < -1000000) {
+    document.getElementById("result").innerHTML = "smol number";
+  } else if (Number(numberA) / Number(numberB) < 0.0000001 && Number(numberA) / Number(numberB) > 0) {
+    document.getElementById("result").innerHTML = "0<sup>+</sup>";
+  } else if (Number(numberA) / Number(numberB) > -0.0000001 && Number(numberA) / Number(numberB) < 0) {
+    document.getElementById("result").innerHTML = "0<sup>-</sup>";
+  } else {
+    document.getElementById("result").innerHTML = Number(numberA) / Number(numberB);
+  }  
+}
