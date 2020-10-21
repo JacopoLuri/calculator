@@ -1,5 +1,8 @@
-a.getElementById("calculator-a");
-b.getElementById("calculator-b")
+const a = document.querySelector("#calculator-a");
+const b = document.querySelector("#calculator-b");
+const sum = document.querySelector("#sum");
+const multiply = document.querySelector("#product")
+
 function multiply(a, b) {
     return a * b;
   };
