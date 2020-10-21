@@ -7,23 +7,23 @@
     <title>Calculator</title>
 </head>
     <body>
-       <div class="input-container">
-        <div id="calc-body" class="boxcontainer">
-            <form method="GET">
-                <input type="number" id="numberA" placeholder="0" onkeydown="return event.keyCode !== 69">
-                <input type="number" id="numberB" placeholder="0" onkeydown="return event.keyCode !== 69">
-            </form>
-            <div class="operator-container">
-            <button type="button" onclick=sum()>+</button>
-            <button type="button" onclick=substraction()>-</button>
-            <button type="button" onclick=product()>x</button>
-            <button type="button" onclick=divide()>/</button>
-            </div>
-<div class="result">
-            <p id="result"></div>
-        </div>
-        </div>
-        </div>
+<div class="calculator-body">
+    <div class="result-container">
+        <p id="result"></p>
+    </div>
+    <div class="input-container">
+        <form method="GET">
+            <input type="number" id="numberA" placeholder="0" onkeydown="return event.keyCode !== 69">
+            <input type="number" id="numberB" placeholder="0" onkeydown="return event.keyCode !== 69">
+        </form>
+    </div>
+    <div class="operator-container">
+        <button type="button" onclick=sum()>+</button>
+        <button type="button" onclick=substraction()>-</button>
+        <button type="button" onclick=product()>x</button>
+        <button type="button" onclick=divide()>/</button>
+    </div>
+</div>
     <script src="script.js"></script>
     </body>
 </html>
