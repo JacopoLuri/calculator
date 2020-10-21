@@ -2,9 +2,9 @@ function sum() {
   const numberA = document.getElementById("numberA").value;
   const numberB = document.getElementById("numberB").value;
   if (Number(numberA) + Number(numberB) > 1000000) {
-    document.getElementById("result").innerHTML = "<b>thick</b>  boi";
+    document.getElementById("result").innerHTML = "∞";
   } else if (Number(numberA) + Number(numberB) < -1000000) {
-    document.getElementById("result").innerHTML = "smol number";
+    document.getElementById("result").innerHTML = "-∞";
   } else if (Number(numberA) + Number(numberB) < 0.0000001 && Number(numberA) + Number(numberB) > 0) {
     document.getElementById("result").innerHTML = "0<sup>+</sup>";
   } else if (Number(numberA) + Number(numberB) > -0.0000001 && Number(numberA) + Number(numberB) < 0) {
@@ -18,9 +18,9 @@ function substraction() {
   const numberA = document.getElementById("numberA").value;
   const numberB = document.getElementById("numberB").value;
   if (Number(numberA) - Number(numberB) > 1000000) {
-    document.getElementById("result").innerHTML = "<b>thick</b>  boi";
+    document.getElementById("result").innerHTML = "∞";
   } else if (Number(numberA) - Number(numberB) < -1000000) {
-    document.getElementById("result").innerHTML = "smol number";
+    document.getElementById("result").innerHTML = "-∞";
   } else if (Number(numberA) - Number(numberB) < 0.0000001 && Number(numberA) - Number(numberB) > 0) {
     document.getElementById("result").innerHTML = "0<sup>+</sup>";
   } else if (Number(numberA) - Number(numberB) > -0.0000001 && Number(numberA) - Number(numberB) < 0) {
@@ -35,9 +35,9 @@ function product() {
   const numberA = document.getElementById("numberA").value;
   const numberB = document.getElementById("numberB").value;
   if (Number(numberA) * Number(numberB) > 1000000) {
-    document.getElementById("result").innerHTML = "<b>thick</b>  boi";
+    document.getElementById("result").innerHTML = "∞";
   } else if (Number(numberA) * Number(numberB) < -1000000) {
-    document.getElementById("result").innerHTML = "smol number";
+    document.getElementById("result").innerHTML = "-∞";
   } else if (Number(numberA) * Number(numberB) < 0.0000001 && Number(numberA) * Number(numberB) > 0) {
     document.getElementById("result").innerHTML = "0<sup>+</sup>";
   } else if (Number(numberA) * Number(numberB) > -0.0000001 && Number(numberA) * Number(numberB) < 0) {
@@ -52,9 +52,9 @@ function divide() {
   const numberA = document.getElementById("numberA").value;
   const numberB = document.getElementById("numberB").value;
   if (Number(numberA) / Number(numberB) > 1000000) {
-    document.getElementById("result").innerHTML = "<b>thick</b>  boi";
+    document.getElementById("result").innerHTML = "∞";
   } else if (Number(numberA) / Number(numberB) < -1000000) {
-    document.getElementById("result").innerHTML = "smol number";
+    document.getElementById("result").innerHTML = "-∞";
   } else if (Number(numberA) / Number(numberB) < 0.0000001 && Number(numberA) / Number(numberB) > 0) {
     document.getElementById("result").innerHTML = "0<sup>+</sup>";
   } else if (Number(numberA) / Number(numberB) > -0.0000001 && Number(numberA) / Number(numberB) < 0) {
