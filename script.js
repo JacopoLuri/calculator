@@ -51,7 +51,9 @@ function divide() {
   console.log(document.getElementById("numberA").value === "")
   const numberA = document.getElementById("numberA").value;
   const numberB = document.getElementById("numberB").value;
-  if (Number(numberA) / Number(numberB) > 1000000) {
+  if (numberB == "" || numberA == 0) {
+    document.getElementById("result").innerHTML = "ERROR";
+  } else if (Number(numberA) / Number(numberB) > 1000000) {
     document.getElementById("result").innerHTML = "∞";
   } else if (Number(numberA) / Number(numberB) < -1000000) {
     document.getElementById("result").innerHTML = "-∞";
