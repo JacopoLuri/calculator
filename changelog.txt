@@ -1,0 +1,6 @@
+linked style.css
+changed <title>
+added <meta>s tags in <head>
+added task.txt
+linked font VT323
+added css ver 0.1
