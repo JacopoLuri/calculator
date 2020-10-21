@@ -8,14 +8,18 @@
 </head>
     <body>
         <div id="calc-body">
+
             <form method="GET">
                 <input type="number" id="numberA" placeholder="0" onkeydown="return event.keyCode !== 69">
                 <input type="number" id="numberB" placeholder="0" onkeydown="return event.keyCode !== 69">
             </form>
-            <button type="button" onclick=sum()>+</button>
-            <button type="button" onclick=substraction()>-</button>
-            <button type="button" onclick=product()>x</button>
-            <button type="button" onclick=divide()>/</button>
+
+            <div>
+                <button type="button" onclick=sum()>+</button>
+                <button type="button" onclick=substraction()>-</button>
+                <button type="button" onclick=product()>x</button>
+                <button type="button" onclick=divide()>/</button>
+            </div>
         
             <div id="result"></div>
         </div>
