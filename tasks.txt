@@ -1,4 +1,4 @@
 PERSON 1 jane. merge
-PERSON 2 teiko. alert when write letters in a&b
+PERSON 2 ____alert when write letters in a&b
 PERSON 3 jacopo (?)add divide and substract AFTER jane merged since you need new classes
-PERSON 4 ____ make it responsive (need someone on it)
+PERSON 4 teiko make it responsive
