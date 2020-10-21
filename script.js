@@ -1,17 +1,16 @@
-function multiply(a, b) {
-    return a * b;
-  };
-  
-  function sum(a, b) {
-    return a + b;
-  };
-  
-  const calculator4 = (callback, a, b) => {
-    console.log(
-      `The result is ${callback == sum ? (a+b) : (a*b)} Teiko refractoring`
-    )
-  };
-  
-  /* remove this part when .getelementbyidis working
-  calculator4(sum, 92, 27);
-  calculator4(multiply, 56, 44);*/
+function sum() {
+  const numberA = document.getElementById("numberA").value;
+  const numberB = document.getElementById("numberB").value;
+  document.getElementById("result").innerHTML = Number(numberA) + Number(numberB);
+}
+
+function product() {
+  console.log(document.getElementById("numberA").value === "")
+  const numberA = document.getElementById("numberA").value;
+  const numberB = document.getElementById("numberB").value;
+  if (numberA == "" || numberB == "" || numberB == 0 || numberA == 0) {
+    document.getElementById("result").innerHTML = "black hole"
+  } else {
+    document.getElementById("result").innerHTML = Number(numberA) + Number(numberB);
+  }  
+}
