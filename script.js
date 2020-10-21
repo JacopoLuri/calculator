@@ -25,6 +25,9 @@ const welcomeText = document.querySelector('.welcome');
 
 const sum = (a, b) => a + b;
 const multiply = (a, b) => a * b;
+const substraction = (a, b) => a - b;
+const divide = (a, b) => a / b;
+
 
 const clear = (el) => {
   el.innerHTML = '';
@@ -45,6 +48,12 @@ buttons.forEach((button) => {
     } else if (element.target.classList.contains('product_result_btn')) {
       const resOfMultiply = multiply(firstValue, secondValue);
       result.innerHTML = resOfMultiply;
+    } else if (element.target.classList.contains('substraction_result_btn')){
+      const resOfSubtraction = substraction(firstValue, secondValue);
+      result.innerHTML = resOfSubtraction;
+    } else if (element.target.classList.contains('divide_result_btn')) {
+      const resOfDivide = divide(firstValue, secondValue);
+      result.innerHTML = resOfDivide.toFixed(2);
     } else {
       clear(result);
       clearInputs();
