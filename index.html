@@ -3,41 +3,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<<<<<<< HEAD
 
 <title>Document</title>
     <meta name="autors" description="Jacopo Luri, Teiko Mancini, Carlos Orellana, Ioan Lungu Tranole, Yauheniya Habrykava and Dima Piskun">
     <meta name="content" description="A calculator started as a question on slack leading to a learning project">
     <link rel="stylesheet" href="style.css">
     <link href='https://fonts.googleapis.com/css?family=VT323' rel='stylesheet'></head>
+=======
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+>>>>>>> 961e48d9550bc4eec31e764e08f53267c9e6b494
     <body>
-        <div class="form-container">
-            <form method="GET">
-            <!--getelementbyid a, b -->
-           
-            <div class="box-container">
-                <div class="result-container">
-                    <p>
-                        <!-- result would be displayed here --> RESULT
-                    </p>
+        <main class="main">
+            <section>
+                <div class="wrapper">
+                    <div class="inner-wrapper box-container">
+                      
+                        <div class="welcome">
+                            <h3 class="welcome_text">Hello stranger!</h3>
+                        </div>
+
+                            <div class="form-container">
+                                    <div class="form">
+                                <div class="box-container">
+                                 
+                                    <div class=" result result-container">
+                                        <p class="text_result">
+                                            RESULT
+                                        </p>
+                                    </div>
+                                <div class="input_wrap">
+                                    <div class="input-container">
+                                        <input class="input" type="text" id="calculator-a" autofocus autocomplete="off" placeholder="first value">
+                                    </div>
+                                    <div class="input-container">
+                                        <input class="input" type="text" id="calculator-b" autocomplete="off" placeholder="second value">
+                                    </div>
+                                </div> 
+                                    <!-- never created buttons. i want that on an onclick event, one of them calls the function sum and the other one calls the function product.-->
+                                    <!-- <div class="operator-container">
+                                        <input type="submit"  value="SUM">
+                                    </div>
+                                    <div class="operator-container">
+                                        <input type="submit" value="MULTIPLY">
+                                    </div> -->
+                                    <div class="button_wrap operator-container">
+                                        <button class="get-result_btn sum_result_btn" id="sum_btn" type="submit" >SUM</button>
+                                        <button class="get-result_btn product_result_btn" id="product_btn" type="submit" >MULTIPLY</button>
+                                      </div>
+                                    <div class="clear_btn_wrap">
+                                        <button class="clear get-result_btn">CLEAR</button>
+                                    </div> 
+                                </div>
+                            </div>
+                            </div>
+
+
+                            <!-- <div class="welcome">
+                                <h3 class="welcome_text">Hello stranger!</h3>
+                            </div>
+                            <div class="input_wrap">
+                                <input class="input" type="text" id="calculator-a" autofocus autocomplete="off" placeholder="write a number">
+                                <input class="input" type="text" id="calculator-b" autocomplete="off" placeholder="write another number">
+                            </div>
+                          <div class="button_wrap">
+                            <button class="get-result_btn sum_result_btn" id="sum_btn" type="submit" >SUM</button>
+                            <button class="get-result_btn product_result_btn" id="product_btn" type="submit" >PRODUCT</button>
+                          </div>
+                          <div class="result_wrap">
+                            <div class="result">
+                                <p class="text_result"></p>
+                             </div>
+                          </div>
+                          <div class="clear_btn_wrap">
+                              <button class="clear get-result_btn">CLEAR</button>
+                          </div> -->
+                      
+                         <div id="result"> </div>
+                    </div>
                 </div>
-                <div class="input-container">
-                    <input type="text" id="calculator-a" placeholder="first value">
-                </div>
-                <div class="input-container">
-                    <input type="text" id="calculator-b" placeholder="second value">
-                </div>
-                <!-- never created buttons. i want that on an onclick event, one of them calls the function sum and the other one calls the function product.-->
-                <div class="operator-container">
-                    <input type="submit" onclick="return sum" value="SUM">
-                </div>
-                <div class="operator-container">
-                    <input type="submit" onclick="return product" value="MULTIPLY">
-                </div>
-            </div>
-            </form>
-        </div>
-        <!--write result inside div, i think with innerhtml but not sure-->
-        <div id="result"> </div>
-        <script src="script.js"></script>
+            </section>
+        </main>
+        <script src="./script.js"></script>
     </body>
     </html>
