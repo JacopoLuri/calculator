@@ -7,15 +7,20 @@
     <title>Calculator</title>
 </head>
     <body>
+        <div class="left-margin"></div>
 <div class="calculator-body">
     <div class="result-container">
+        <div class="padding-top"></div>
         <p id="result"></p>
+        <div class="patting-bottom"></div>
     </div>
     <div class="input-container">
+        <div class="top-space"></div>
         <form method="GET">
             <input type="number" id="numberA" placeholder="0" onkeydown="return event.keyCode !== 69">
             <input type="number" id="numberB" placeholder="0" onkeydown="return event.keyCode !== 69">
         </form>
+        <div class="bottom-space"></div>
     </div>
     <div class="operator-container">
         <button type="button" onclick=sum()>+</button>
@@ -24,6 +29,7 @@
         <button type="button" onclick=divide()>/</button>
     </div>
 </div>
+<div class="right-margin"></div>
     <script src="script.js"></script>
     </body>
 </html>
