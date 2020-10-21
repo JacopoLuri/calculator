@@ -17,11 +17,18 @@ const buttons = document.querySelectorAll('.get-result_btn');
 
 const welcomeText = document.querySelector('.welcome');
 
-    setTimeout(() => {
-      welcomeText.classList.add('scale-in-center');
-      welcomeText.getElementsByClassName.display = 'flex';
-      inputFirstNum.autofocus;
-    }, 2000);
+const errorWrap = document.querySelector(".error");
+const errorInnerWrap = document.querySelector(".typewriter");
+const errorMessage = 'Oh! I can calculate only nubmers!';
+
+const i = 0;
+const speed = 90;
+
+setTimeout(() => {
+  welcomeText.classList.add('scale-in-center');
+  welcomeText.getElementsByClassName.display = 'flex';
+  inputFirstNum.autofocus;
+}, 2000);
 
 const sum = (a, b) => a + b;
 const multiply = (a, b) => a * b;
@@ -37,23 +44,70 @@ const clearInputs = () => inputs.forEach((el) => {
   el.value = '';
 });
 
+const errorMsg = () => {
+  alert('Heeey');
+}
+
+const validate = (str) => {
+  const reg = /^\d+$/;
+  return str.match(reg) ? str : false;
+}
+
+const typeWriter = () => {
+  if (i < errorMessage.length) {
+    errorWrap.classList.remove('scale-out-center');
+    errorWrap.classList.add('scale-in-center');
+    errorInnerWrap.innerHTML += errorMessage.charAt(i);
+    i++;
+    setTimeout(typeWriter, speed);
+  }
+  setTimeout(() => {
+    errorWrap.classList.remove('scale-in-center');
+    errorWrap.classList.add('scale-out-center');
+    errorInnerWrap.innerHTML = '';
+  }, 5000)
+}
+
 buttons.forEach((button) => {
   button.addEventListener('click', (element) => {
     element.preventDefault();
-    const firstValue = Number(inputFirstNum.value);
-    const secondValue = Number(inputSecondNum.value);
+    const firstValue = inputFirstNum.value;
+    const secondValue = inputSecondNum.value;
+
     if (element.target.classList.contains('sum_result_btn')) {
-      const resOfSum = sum(firstValue, secondValue);
-      result.innerHTML = resOfSum; 
+      if(validate(firstValue) && validate(secondValue)) {
+        const resOfSum = sum(Number(firstValue), Number(secondValue));
+        result.innerHTML = resOfSum.toFixed(3); 
+      } else {
+        typeWriter(errorMessage, 0, 50);
+        clearInputs()
+      }
+      
     } else if (element.target.classList.contains('product_result_btn')) {
-      const resOfMultiply = multiply(firstValue, secondValue);
-      result.innerHTML = resOfMultiply;
+      if (validate(firstValue) && validate(secondValue)) {
+        const resOfMultiply = multiply(Number(firstValue), Number(secondValue));
+        result.innerHTML = resOfMultiply.toFixed(3);
+      } else {
+        typeWriter(errorMessage, 0, 50);
+        clearInputs()
+      }
+      
     } else if (element.target.classList.contains('substraction_result_btn')){
-      const resOfSubtraction = substraction(firstValue, secondValue);
-      result.innerHTML = resOfSubtraction;
+      if (validate(firstValue) && validate(secondValue)) {
+        const resOfSubtraction = substraction(Number(firstValue), Number(secondValue));
+        result.innerHTML = resOfSubtraction.toFixed(3);
+      } else {
+        typeWriter(errorMessage, 0, 50);
+        clearInputs()
+      }
     } else if (element.target.classList.contains('divide_result_btn')) {
-      const resOfDivide = divide(firstValue, secondValue);
-      result.innerHTML = resOfDivide.toFixed(2);
+      if (validate(firstValue) && validate(secondValue)) {
+        const resOfDivide = divide(Number(firstValue), Number(secondValue));
+        result.innerHTML = resOfDivide.toFixed(3);
+      } else {
+        typeWriter(errorMessage, 0, 50);
+        clearInputs()
+      }
     } else {
       clear(result);
       clearInputs();
