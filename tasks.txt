@@ -4,3 +4,4 @@ TASK 2
 create buttons (callback sum and calback multiply)
 TASK 3
 change innerhtml??
+TASK 4 add @media 
