@@ -12,6 +12,9 @@ function multiply(a, b) {
   };
   
   function calculator3 = (callback, a, b) => {
+    element.preventDefault();
+    a=Number(a.value)
+    b=Number(b.value)
     console.log(
       `The result is ${callback == sum ? (a+b) : (a*b)} :D`
     )
