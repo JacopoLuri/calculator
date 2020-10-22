@@ -19,10 +19,6 @@ const welcomeText = document.querySelector('.welcome');
 
 const errorWrap = document.querySelector(".error");
 const errorInnerWrap = document.querySelector(".typewriter");
-const errorMessage = 'Oh! I can calculate only nubmers!';
-
-const i = 0;
-const speed = 90;
 
 setTimeout(() => {
   welcomeText.classList.add('scale-in-center');
@@ -53,18 +49,16 @@ const validate = (str) => {
   return str.match(reg) ? str : false;
 }
 
+let start = 0;
+
 const typeWriter = () => {
-  if (i < errorMessage.length) {
-    errorWrap.classList.remove('scale-out-center');
-    errorWrap.classList.add('scale-in-center');
-    errorInnerWrap.innerHTML += errorMessage.charAt(i);
-    i++;
-    setTimeout(typeWriter, speed);
-  }
+  const speedOFTyping = 90;
+  const errorMessage = 'Oh! I can calculate only nubmers!';
+  errorInnerWrap.innerHTML += errorMessage.charAt(start);
+  start++;
+  setTimeout(typeWriter, speedOFTyping);
   setTimeout(() => {
-    errorWrap.classList.remove('scale-in-center');
-    errorWrap.classList.add('scale-out-center');
-    errorInnerWrap.innerHTML = '';
+    errorInnerWrap.innerHTML = 'Go for it!';
   }, 5000)
 }
 
@@ -79,7 +73,7 @@ buttons.forEach((button) => {
         const resOfSum = sum(Number(firstValue), Number(secondValue));
         result.innerHTML = resOfSum.toFixed(3); 
       } else {
-        typeWriter(errorMessage, 0, 50);
+        typeWriter();
         clearInputs()
       }
       
@@ -88,7 +82,7 @@ buttons.forEach((button) => {
         const resOfMultiply = multiply(Number(firstValue), Number(secondValue));
         result.innerHTML = resOfMultiply.toFixed(3);
       } else {
-        typeWriter(errorMessage, 0, 50);
+        typeWriter();
         clearInputs()
       }
       
@@ -97,7 +91,7 @@ buttons.forEach((button) => {
         const resOfSubtraction = substraction(Number(firstValue), Number(secondValue));
         result.innerHTML = resOfSubtraction.toFixed(3);
       } else {
-        typeWriter(errorMessage, 0, 50);
+        typeWriter();
         clearInputs()
       }
     } else if (element.target.classList.contains('divide_result_btn')) {
@@ -105,7 +99,7 @@ buttons.forEach((button) => {
         const resOfDivide = divide(Number(firstValue), Number(secondValue));
         result.innerHTML = resOfDivide.toFixed(3);
       } else {
-        typeWriter(errorMessage, 0, 50);
+        typeWriter();
         clearInputs()
       }
     } else {
